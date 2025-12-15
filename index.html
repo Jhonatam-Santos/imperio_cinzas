@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Império de Cinzas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero-section">
+        <nav class="top-menu">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#personagens">Personagens</a></li>
+                <li><a href="#autora">Autora</a></li>
+                <li><a href="#mapa">Mapa</a></li>
+                <li><a href="#avaliacoes">Avaliações</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <div class="left-col">
+                <h1 class="main-title">
+                    <span>IMPÉRIO</span>
+                    <span class="small-word">DE</span>
+                    <span>CINZAS</span>
+                </h1>
+                <p class="subtitle">UM ROMANCE DE CAMILLA SALES</p>
+            </div>
+            <div class="right-col">
+                <img src="./assets/livro.png" alt="Capa do Livro Império de Cinzas" class="book-cover">
+            </div>
+        </div>
+    </header>
+
+    <section id="sobre" class="content-section">
+        <div class="content-container">
+            <h2 class="section-title">Sobre o Livro</h2>
+            <hr class="divider">
+
+            <p class="lead-text">
+                Com 400 páginas, múltiplos pontos de vista e cinco protagonistas marcantes, 
+                <strong>Império de Cinzas</strong> é o início de uma duologia distópica que questiona 
+                o preço da sobrevivência e a natureza da verdade.
+            </p>
+
+            <p>
+                Em um mundo consumido por "incêndios infinitos", a ilha de Prometheus é o último refúgio da humanidade. 
+                Um paraíso artificial erguido e governado com mão de ferro por três famílias fundadoras:
+                <br><span class="highlight-names">Os Wright, os Verídion e os Jacob.</span>
+            </p>
+
+            <p>
+                A Narrativa começa no 50° aniversário do Império, quando a explosão da Grande Fonte, 
+                o purificador de ar que simboliza a salvação, revela uma rachadura sob o verniz de sua perfeição.
+            </p>
+
+            <div class="genres-container">
+                <span class="genre-tag">Distopia</span>
+                <span class="separator">•</span>
+                <span class="genre-tag">Romantasia</span>
+                <span class="separator">•</span>
+                <span class="genre-tag">YA (Young Adult)</span>
+                <span class="separator">•</span>
+                <span class="genre-tag">Sci-fi</span>
+            </div>
+
+            <div class="synopsis-box">
+                <h3>Sinopse</h3>
+                <p>
+                    Em um futuro distópico tomado por incêndios incontroláveis, a humanidade se estabelece em seu único refúgio. 
+                    Prometheus, uma ilha protegida da destruição do antigo mundo, onde um Império surge trazendo com ele a 
+                    promessa de um recomeço. Mas quando terroristas ameaçam a paz das famílias Imperiais, 
+                    Teruhashi, herdeira de uma das famílias, começa uma jornada para descobrir quem acendeu o primeiro fósforo.
+                </p>
+            </div>
+
+            <p class="sequel-note">
+                A continuação, <em>Cidadela de Vidro</em>, está em andamento.
+            </p>
+        </div>
+    </section>
+    <section id="personagens" class="characters-section">
+        <h2 class="section-title">Personagens</h2>
+        <hr class="divider">
+        <div class="carousel-container">
+            <button class="carousel-btn prev-btn" id="prevBtn">&#10094;</button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-card">
+                        <div class="card-frame">
+                            <img src="./assets/Teruhashi.jpg" alt="Teruhashi Wright" class="char-img zoomable">
+                            <div class="char-overlay">
+                                <h3>Teruhashi Wright</h3>
+                                <p>25 anos</p>
+                                <p>Signo: Áries</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carousel-card">
+                        <div class="card-frame">
+                            <img src="./assets/Sato.jpg" alt="Sato Atkins" class="char-img zoomable">
+                            <div class="char-overlay">
+                                <h3>Sato Atkins</h3>
+                                <p>27 anos</p>
+                                <p>Signo: Escorpião</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carousel-card">
+                        <div class="card-frame">
+                            <img src="./assets/Asaki.jpg" alt="Asaki Veridion" class="char-img zoomable">
+                            <div class="char-overlay">
+                                <h3>Asaki Veridion</h3>
+                                <p>26 anos</p>
+                                <p>Signo: Sagitário</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carousel-card">
+                        <div class="card-frame">
+                            <img src="./assets/Lilith.jpg" alt="Lilith Jacob" class="char-img zoomable">
+                            <div class="char-overlay">
+                                <h3>Lilith Jacob</h3>
+                                <p>25 anos</p>
+                                <p>Signo: Leão</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carousel-card">
+                        <div class="card-frame">
+                            <img src="./assets/Zack.jpg" alt="Zack Levine" class="char-img zoomable">
+                            <div class="char-overlay">
+                                <h3>Zack Levine</h3>
+                                <p>28 anos</p>
+                                <p>Signo: Libra</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel-btn next-btn" id="nextBtn">&#10095;</button>
+        </div>
+    </section>
+    <section id="autora" class="author-section">
+        <div class="author-container">
+            <h2 class="section-title">A Autora</h2>
+            <hr class="divider">
+
+            <div class="author-content">
+                <div class="author-frame-wrapper">
+                    <div class="author-frame">
+                        <img src="./assets/camilla_sales.jpeg" alt="Camilla Sales" class="author-img">
+                    </div>
+                </div>
+
+                <div class="author-bio">
+                    <h3>Camilla Sales</h3>
+                    <p>É a mais nova escritora nacional e Sergipana de ficção e fantasia, sua primeira grande conquista é este livro,  o “Império de Cinzas”.</p>
+                    <p>Que está sendo entregue para o mundo carregando o peso de seus sonhos, esperando que eles ajudem a abrir portas para os sonhos de seus leitores.</p>
+                    <p>Camilla é uma entusiasta de fantasia com um apetite insaciável por histórias de amor, que espera poder compartilhar com os leitores.</p>
+                    <p>Atualmente trabalha em “Cidadela de Vidro”, o grande final desta história.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-btn">Instagram</a>
+                        <a href="#" class="social-btn">Twitter</a>
+                        <a href="#" class="social-btn">Amazon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <dialog id="imageDialog" class="modal-zoom">
+        <div class="modal-wrapper">
+            <button id="closeModal" class="close-btn">&times;</button>
+            <img id="modalImage" src="" alt="Imagem Ampliada">
+        </div>
+    </dialog>
+    <script src="script.js"></script>
+    </body>
+</html>

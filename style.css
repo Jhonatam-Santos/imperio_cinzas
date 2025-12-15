@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+}
+
+.hero-section {
+    background-image: url('./assets/casas.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    min-height: 100vh; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-menu {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.top-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.top-menu a {
+    text-decoration: none;
+    color: white;
+    background-color: #8B5A4B;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+}
+
+.top-menu a:hover {
+    background-color: #6d4236;
+}
+
+.hero-content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 50px;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.left-col {
+    flex: 1;
+    padding-right: 20px;
+    color: white;
+    text-align: left;
+}
+
+.main-title {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    line-height: 1.1;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.main-title span {
+    display: block;
+}
+
+.main-title .small-word {
+    font-size: 2rem;
+    margin-left: 50px;
+}
+
+.subtitle {
+    margin-top: 20px;
+    font-style: italic;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.right-col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.book-cover {
+    max-width: 100%;
+    width: 350px;
+    height: auto;
+    filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.5));
+}
+
+.content-section {
+    background-color: #f4f1ea;
+    color: #2c3e50;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-style: italic;
+    color: #8c5e4a; /* Mesma cor terracota dos botões */
+    margin-bottom: 10px;
+}
+
+.divider {
+    width: 100px;
+    height: 3px;
+    background-color: #4f667d; /* Azul do footer */
+    border: none;
+    margin: 0 auto 40px auto;
+}
+
+.content-section p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.lead-text {
+    font-size: 1.3rem !important;
+}
+
+.highlight-names {
+    display: block;
+    margin-top: 10px;
+    font-weight: 700;
+    font-style: italic;
+    color: #8c5e4a;
+    font-size: 1.25rem;
+}
+
+.genres-container {
+    margin: 40px 0;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    color: #4f667d;
+}
+
+.separator {
+    margin: 0 10px;
+    color: #ccc;
+}
+
+.synopsis-box {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 40px 0;
+    margin: 40px 0;
+}
+
+.synopsis-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.sequel-note {
+    font-size: 1rem !important;
+    opacity: 0.8;
+    margin-top: 50px;
+    font-style: italic;
+}
+
+/* --- Seção Personagens --- */
+.characters-section {
+    background-color: #f4f1ea; /* Um azul bem clarinho para diferenciar da seção anterior */
+    padding: 80px 20px;
+    text-align: center;
+    overflow: hidden; /* Impede rolagem horizontal indesejada */
+}
+
+/* Container do Carrossel */
+.carousel-container {
+    position: relative;
+    max-width: 1300px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Área visível do trilho */
+.carousel-track-container {
+    width: 100%;
+    overflow: hidden; /* Esconde os cards que estão fora da vista */
+    padding: 20px 0; /* Espaço para sombra não cortar */
+}
+
+/* O trilho que se move */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    list-style: none;
+    gap: 30px; /* Espaço entre os cards */
+}
+
+/* O Card Individual */
+.carousel-card {
+    min-width: 280px; /* Largura fixa do card */
+    max-width: 280px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* A Moldura Pastel */
+.card-frame {
+    position: relative;
+    border: 15px solid #dcd0c0; /* TOM PASTEL (Beige/Areia) */
+    background-color: #dcd0c0;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Sombra elegante */
+    overflow: hidden;
+    height: 450px; /* Altura do card */
+    transition: transform 0.3s ease;
+}
+
+.card-frame:hover {
+    transform: translateY(-10px); /* Levanta levemente ao passar o mouse */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    border-color: #cbbba8; /* Escurece levemente a borda no hover */
+}
+
+/* Imagem do Personagem */
+.char-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o card sem distorcer */
+    display: block;
+}
+
+/* Texto Interno (Overlay) */
+.char-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.6), transparent);
+    color: white;
+    padding: 20px 15px;
+    text-align: center;
+    transform: translateY(60%); /* Esconde parte do texto inicialmente */
+    transition: transform 0.4s ease;
+}
+
+/* Título do Personagem */
+.char-overlay h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #e8d5c8; /* Texto dourado/pastel */
+    text-shadow: 1px 1px 2px black;
+}
+
+/* Descrição */
+.char-overlay p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0; /* Invisível inicialmente */
+    transition: opacity 0.3s ease 0.1s;
+}
+
+/* Efeito Hover: Mostra tudo */
+.card-frame:hover .char-overlay {
+    transform: translateY(0); /* Sobe o texto */
+    background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.7));
+}
+
+.card-frame:hover .char-overlay p {
+    opacity: 1; /* Mostra a descrição */
+}
+
+/* Botões de Navegação */
+.carousel-btn {
+    background-color: rgba(79, 102, 125, 0.8); /* Azul Slate semi-transparente */
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 6px 15px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background 0.3s;
+    position: absolute;
+}
+
+.carousel-btn:hover {
+    background-color: #8c5e4a; /* Muda para Terracota no hover */
+}
+
+.prev-btn { left: -50px; }
+.next-btn { right: -50px; }
+
+/* Ajuste botões para mobile */
+@media (max-width: 768px) {
+    .prev-btn { left: 0; }
+    .next-btn { right: 0; }
+    .carousel-container { padding: 0 50px; }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    
+    .left-col {
+        padding-right: 0;
+        margin-top: 30px;
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .main-title .small-word {
+        margin-left: 0;
+    }
+}
+
+.zoomable {
+    cursor: zoom-in;
+}
+
+/* A caixa de diálogo em si */
+dialog.modal-zoom {
+    margin: auto; /* Centraliza na tela */
+    background: transparent; /* Fundo transparente para focar na imagem */
+    border: none;
+    padding: 0;
+    max-width: 90vw; /* Máximo 90% da largura da tela */
+    max-height: 90vh; /* Máximo 90% da altura */
+    outline: none;
+    overflow: hidden; /* Remove barras de rolagem do dialog */
+}
+
+/* O fundo escuro atrás do modal (Nativo do <dialog>) */
+dialog.modal-zoom::backdrop {
+    background-color: rgba(0, 0, 0, 0.85); /* Preto com 85% de opacidade */
+    backdrop-filter: blur(5px); /* Um leve desfoque no fundo */
+}
+
+/* Wrapper para posicionar o botão X */
+.modal-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* A imagem dentro do modal */
+#modalImage {
+    display: block;
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain; /* Garante que a imagem inteira apareça */
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease; /* Pequena animação de entrada */
+}
+
+/* Botão de Fechar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    text-shadow: 0 2px 4px black;
+    z-index: 10;
+    line-height: 1;
+    transition: transform 0.2s;
+}
+
+.close-btn:hover {
+    transform: scale(1.2);
+    color: #e85d04; /* Laranja ao passar o mouse */
+}
+
+/* Animação simples de zoom */
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* --- Seção Autora --- */
+.author-section {
+    background-color: #f4f1ea; /* Mesmo tom creme da seção 'Sobre o Livro' */
+    color: #2c3e50;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.author-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.author-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* --- Moldura da Foto --- */
+.author-frame-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.author-frame {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    padding: 8px; /* Espaço branco entre a foto e a borda colorida */
+    background-color: #fff; /* Fundo branco do espaço */
+    border: 3px solid #8c5e4a; /* Borda fina interna */
+    box-shadow: 
+        0 0 0 8px #dcd0c0, /* Cria uma segunda borda externa (tom pastel) */
+        0 10px 20px rgba(0,0,0,0.15); /* Sombra suave */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.author-frame:hover {
+    transform: scale(1.02); /* Leve zoom ao passar o mouse */
+}
+
+.author-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a foto não fique esticada */
+    border-radius: 50%;
+}
+
+/* --- Texto da Bio --- */
+.author-bio h3 {
+    font-size: 2rem;
+    color: #8c5e4a;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.author-bio p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botões de Redes Sociais */
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-btn {
+    text-decoration: none;
+    color: #4f667d;
+    font-weight: bold;
+    border: 1px solid #4f667d;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.social-btn:hover {
+    background-color: #4f667d;
+    color: white;
+    transform: translateY(-2px);
+}
