@@ -1,182 +1,393 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Império de Cinzas</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header class="hero-section">
-        <nav class="top-menu">
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#personagens">Personagens</a></li>
-                <li><a href="#autora">Autora</a></li>
-                <li><a href="#mapa">Mapa</a></li>
-                <li><a href="#avaliacoes">Avaliações</a></li>
-            </ul>
-        </nav>
-        <div class="hero-content">
-            <div class="left-col">
-                <h1 class="main-title">
-                    <span>IMPÉRIO</span>
-                    <span class="small-word">DE</span>
-                    <span>CINZAS</span>
-                </h1>
-                <p class="subtitle">UM ROMANCE DE CAMILLA SALES</p>
-            </div>
-            <div class="right-col">
-                <img src="./assets/livro.png" alt="Capa do Livro Império de Cinzas" class="book-cover">
-            </div>
-        </div>
-    </header>
-
-    <section id="sobre" class="content-section">
-        <div class="content-container">
-            <h2 class="section-title">Sobre o Livro</h2>
-            <hr class="divider">
-
-            <p class="lead-text">
-                Com 400 páginas, múltiplos pontos de vista e cinco protagonistas marcantes, 
-                <strong>Império de Cinzas</strong> é o início de uma duologia distópica que questiona 
-                o preço da sobrevivência e a natureza da verdade.
-            </p>
-
-            <p>
-                Em um mundo consumido por "incêndios infinitos", a ilha de Prometheus é o último refúgio da humanidade. 
-                Um paraíso artificial erguido e governado com mão de ferro por três famílias fundadoras:
-                <br><span class="highlight-names">Os Wright, os Verídion e os Jacob.</span>
-            </p>
-
-            <p>
-                A Narrativa começa no 50° aniversário do Império, quando a explosão da Grande Fonte, 
-                o purificador de ar que simboliza a salvação, revela uma rachadura sob o verniz de sua perfeição.
-            </p>
-
-            <div class="genres-container">
-                <span class="genre-tag">Distopia</span>
-                <span class="separator">•</span>
-                <span class="genre-tag">Romantasia</span>
-                <span class="separator">•</span>
-                <span class="genre-tag">YA (Young Adult)</span>
-                <span class="separator">•</span>
-                <span class="genre-tag">Sci-fi</span>
-            </div>
-
-            <div class="synopsis-box">
-                <h3>Sinopse</h3>
-                <p>
-                    Em um futuro distópico tomado por incêndios incontroláveis, a humanidade se estabelece em seu único refúgio. 
-                    Prometheus, uma ilha protegida da destruição do antigo mundo, onde um Império surge trazendo com ele a 
-                    promessa de um recomeço. Mas quando terroristas ameaçam a paz das famílias Imperiais, 
-                    Teruhashi, herdeira de uma das famílias, começa uma jornada para descobrir quem acendeu o primeiro fósforo.
-                </p>
-            </div>
-
-            <p class="sequel-note">
-                A continuação, <em>Cidadela de Vidro</em>, está em andamento.
-            </p>
-        </div>
-    </section>
-    <section id="personagens" class="characters-section">
-        <h2 class="section-title">Personagens</h2>
-        <hr class="divider">
-        <div class="carousel-container">
-            <button class="carousel-btn prev-btn" id="prevBtn">&#10094;</button>
-            <div class="carousel-track-container">
-                <ul class="carousel-track">
-                    <li class="carousel-card">
-                        <div class="card-frame">
-                            <img src="./assets/Teruhashi.jpg" alt="Teruhashi Wright" class="char-img zoomable">
-                            <div class="char-overlay">
-                                <h3>Teruhashi Wright</h3>
-                                <p>25 anos</p>
-                                <p>Signo: Áries</p>
-                            </div>
-                        </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="bi bi-book-half"></i> Império de Cinzas
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">O Livro</a>
                     </li>
-                    <li class="carousel-card">
-                        <div class="card-frame">
-                            <img src="./assets/Sato.jpg" alt="Sato Atkins" class="char-img zoomable">
-                            <div class="char-overlay">
-                                <h3>Sato Atkins</h3>
-                                <p>27 anos</p>
-                                <p>Signo: Escorpião</p>
-                            </div>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#personagens">Personagens</a>
                     </li>
-                    <li class="carousel-card">
-                        <div class="card-frame">
-                            <img src="./assets/Asaki.jpg" alt="Asaki Veridion" class="char-img zoomable">
-                            <div class="char-overlay">
-                                <h3>Asaki Veridion</h3>
-                                <p>26 anos</p>
-                                <p>Signo: Sagitário</p>
-                            </div>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fanarts">Galeria de fãs</a>
                     </li>
-                    <li class="carousel-card">
-                        <div class="card-frame">
-                            <img src="./assets/Lilith.jpg" alt="Lilith Jacob" class="char-img zoomable">
-                            <div class="char-overlay">
-                                <h3>Lilith Jacob</h3>
-                                <p>25 anos</p>
-                                <p>Signo: Leão</p>
-                            </div>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experiencia">Playlist</a>
                     </li>
-                    <li class="carousel-card">
-                        <div class="card-frame">
-                            <img src="./assets/Zack.jpg" alt="Zack Levine" class="char-img zoomable">
-                            <div class="char-overlay">
-                                <h3>Zack Levine</h3>
-                                <p>28 anos</p>
-                                <p>Signo: Libra</p>
-                            </div>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#autora">A Autora</a>
                     </li>
                 </ul>
             </div>
-            <button class="carousel-btn next-btn" id="nextBtn">&#10095;</button>
         </div>
-    </section>
-    <section id="autora" class="author-section">
-        <div class="author-container">
-            <h2 class="section-title">A Autora</h2>
-            <hr class="divider">
-
-            <div class="author-content">
-                <div class="author-frame-wrapper">
-                    <div class="author-frame">
-                        <img src="./assets/camilla_sales.jpeg" alt="Camilla Sales" class="author-img">
+    </nav>
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="floating-card">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 hero-content">
+                        <div class="badge-lancamento">
+                            <i class="bi bi-stars"></i> LANÇAMENTO
+                        </div>
+                        <h1 class="book-title">
+                            <span>IMPÉRIO</span>
+                            <span class="small-word">DE</span>
+                            <span>CINZAS</span>
+                        </h1>
+                        <p class="lead subtitle">Um romance por Camilla Sales</p>
+                        <div class="hero-meta mb-4">
+                            <span><i class="bi bi-star-fill text-warning"></i> 4.8/5</span>
+                            <span class="ms-3"><i class="bi bi-person"></i> 10k+ leitores</span>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="#sobre" class="btn-primary">
+                                <i class="bi bi-book"></i> Saiba mais
+                            </a>
+                            <a href="#" class="btn-outline-light">
+                                <i class="bi bi-cart"></i> Comprar agora
+                            </a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="author-bio">
-                    <h3>Camilla Sales</h3>
-                    <p>É a mais nova escritora nacional e Sergipana de ficção e fantasia, sua primeira grande conquista é este livro,  o “Império de Cinzas”.</p>
-                    <p>Que está sendo entregue para o mundo carregando o peso de seus sonhos, esperando que eles ajudem a abrir portas para os sonhos de seus leitores.</p>
-                    <p>Camilla é uma entusiasta de fantasia com um apetite insaciável por histórias de amor, que espera poder compartilhar com os leitores.</p>
-                    <p>Atualmente trabalha em “Cidadela de Vidro”, o grande final desta história.</p>
-                    
-                    <div class="social-links">
-                        <a href="#" class="social-btn">Instagram</a>
-                        <a href="#" class="social-btn">Twitter</a>
-                        <a href="#" class="social-btn">Amazon</a>
+                    <div class="col-lg-5 text-center">
+                        <div class="book-cover">
+                            <img src="assets/livro.jpg" alt="Capa do Livro Império de Cinzas" class="img-fluid floating-cover">
+                            <div class="cover-shadow"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <dialog id="imageDialog" class="modal-zoom">
-        <div class="modal-wrapper">
-            <button id="closeModal" class="close-btn">&times;</button>
-            <img id="modalImage" src="" alt="Imagem Ampliada">
+    
+    <section id="sobre" class="section livro-section">
+        <div class="container">
+            <h2 class="section-title">Sobre o Livro</h2>
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="livro-card">
+                        <h3><i class="bi bi-journal-bookmark-fill"></i> Informações</h3>
+                        <p>Com 400 páginas, múltiplos pontos de vista e cinco protagonistas marcantes, <strong>Império de Cinzas</strong> é o início de uma duologia distópica que questiona o preço da sobrevivência e a natureza da verdade.</p>
+                        
+                        <div class="livro-stats">
+                            <span class="stat-badge"><i class="bi bi-files"></i> 400 páginas</span>
+                            <span class="stat-badge"><i class="bi bi-people"></i> 5 protagonistas</span>
+                            <span class="stat-badge"><i class="bi bi-book-half"></i> Duologia</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="livro-card">
+                        <h3><i class="bi bi-globe2"></i> O Mundo</h3>
+                        <p>Em um mundo consumido por "Incêndios Infinitos", a ilha de Prometheus é o último refúgio da humanidade. Um paraíso artificial erguido e governado com mão de ferro por três famílias fundadoras:</p>
+                        
+                        <div class="families-grid">
+                            <span class="family-tag">🏛️ OS WRIGHT</span>
+                            <span class="family-tag">⚖️ OS VERÍDIOS</span>
+                            <span class="family-tag">🔥 OS JACOB</span>
+                        </div>
+                        
+                        <p class="mt-3"><small>A narrativa começa no 50º aniversário do Império, quando a explosão da Grande Fonte, o purificador de ar que simboliza a salvação, revela uma rachadura sob o verniz de sua perfeição.</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="sinopse-card">
+                        <h3 style="font-family: 'Cinzel', serif; color: #FFD700; margin-bottom: 1.5rem;">
+                            <i class="bi bi-book"></i> Sinopse
+                        </h3>
+                        <p>Em um futuro distópico tomado por incêndios incontroláveis, a humanidade se estabelece em seu único refúgio. Prometheus, uma ilha protegida da destruição do antigo mundo, onde um império surge trazendo consigo a promessa de um recomeço. Mas quando terroristas ameaçam a paz das famílias imperiais, Teruhashi, herdeira de uma das famílias, começa uma jornada para descobrir quem acendeu o primeiro fósforo.</p>
+                        <div class="continuation">
+                            <i class="bi bi-arrow-right"></i> A continuação, <strong>Cidadela de Vidro</strong>, está em andamento.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                        <span class="stat-badge">🏛️ Distopia</span>
+                        <span class="stat-badge">✨ Romantasia</span>
+                        <span class="stat-badge">📚 YA / Young Adult</span>
+                        <span class="stat-badge">🚀 Sci-Fi</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </dialog>
+    </section>
+
+    <section id="personagens" class="section personagens-section">
+        <div class="container">
+            <h2 class="section-title">Personagens</h2>
+            <div class="personagens-wrapper">
+                <button class="carousel-btn prev" onclick="scrollCarousel(-1)">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next" onclick="scrollCarousel(1)">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+                <div class="personagens-carousel" id="personagensCarousel">
+                    <div class="personagem-carousel-item">
+                        <div class="personagem-card" onclick="abrirModalPersonagem('teruhashi')">
+                            <div class="personagem-img-container">
+                                <img src="assets/personagem-teruhashi.jpg" alt="Teruhashi" class="personagem-img" onerror="this.src='https://placehold.co/400x500/2a2a2a/FFD700?text=Teruhashi'">
+                                <div class="personagem-img-overlay">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </div>
+                            </div>
+                            <div class="personagem-info">
+                                <h3 class="personagem-nome">TERUHASHI</h3>
+                                <div class="personagem-familia">⚖️ Família Wright</div>
+                                <div class="personagem-detalhes">
+                                    <span><i class="bi bi-calendar"></i> 25 Anos</span>
+                                    <span><i class="bi bi-star"></i> Áries</span>
+                                </div>
+                                <p class="personagem-desc">Herdeira destemida que embarca em uma jornada para descobrir a verdade por trás dos incêndios que ameaçam o Império.</p>
+                                <div class="personagem-traits">
+                                    <span class="trait">🔥 Determinada</span>
+                                    <span class="trait">⚔️ Corajosa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personagem-carousel-item">
+                        <div class="personagem-card" onclick="abrirModalPersonagem('sato')">
+                            <div class="personagem-img-container">
+                                <img src="assets/personagem-sato.jpg" alt="Sato Atkins" class="personagem-img" onerror="this.src='https://placehold.co/400x500/2a2a2a/FFD700?text=Sato+Atkins'">
+                                <div class="personagem-img-overlay">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </div>
+                            </div>
+                            <div class="personagem-info">
+                                <h3 class="personagem-nome">SATO ATKINS</h3>
+                                <div class="personagem-familia">🏛️ Família Atkins</div>
+                                <div class="personagem-detalhes">
+                                    <span><i class="bi bi-calendar"></i> 27 Anos</span>
+                                    <span><i class="bi bi-star"></i> Escorpião</span>
+                                </div>
+                                <p class="personagem-desc">Apenas um cidadão de Prometeus, um médico dedicado a seus pacientes mas cercado de mistérios.</p>
+                                <div class="personagem-traits">
+                                    <span class="trait">🌙 Misterioso</span>
+                                    <span class="trait">🗡️ Língua Afiada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personagem-carousel-item">
+                        <div class="personagem-card" onclick="abrirModalPersonagem('asaki')">
+                            <div class="personagem-img-container">
+                                <img src="assets/personagem-asaki.jpg" alt="Asaki Verdion" class="personagem-img" onerror="this.src='https://placehold.co/400x500/2a2a2a/FFD700?text=Asaki+Verdion'">
+                                <div class="personagem-img-overlay">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </div>
+                            </div>
+                            <div class="personagem-info">
+                                <h3 class="personagem-nome">ASAKI VERDION</h3>
+                                <div class="personagem-familia">⚖️ Família Veridion</div>
+                                <div class="personagem-detalhes">
+                                    <span><i class="bi bi-calendar"></i> 26 Anos</span>
+                                    <span><i class="bi bi-star"></i> Sagitário</span>
+                                </div>
+                                <p class="personagem-desc">Um amigo de infância, herdeiro de uma família poderosa no império e dono de um grande coração.</p>
+                                <div class="personagem-traits">
+                                    <span class="trait">💫 Idealista</span>
+                                    <span class="trait">🏹 Aventureiro</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personagem-carousel-item">
+                        <div class="personagem-card" onclick="abrirModalPersonagem('lilith')">
+                            <div class="personagem-img-container">
+                                <img src="assets/personagem-lilith.jpg" alt="Lilith Jacob" class="personagem-img" onerror="this.src='https://placehold.co/400x500/2a2a2a/FFD700?text=Lilith+Jacob'">
+                                <div class="personagem-img-overlay">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </div>
+                            </div>
+                            <div class="personagem-info">
+                                <h3 class="personagem-nome">LILITH JACOB</h3>
+                                <div class="personagem-familia">⚖️ Família Jacob</div>
+                                <div class="personagem-detalhes">
+                                    <span><i class="bi bi-calendar"></i> 25 Anos</span>
+                                    <span><i class="bi bi-star"></i> Leão</span>
+                                </div>
+                                <p class="personagem-desc">Herdeira de uma das 3 grandes famílias de Prometheus, não mede esforços para por em prática aquilo que considera correto.</p>
+                                <div class="personagem-traits">
+                                    <span class="trait">🔮 Visionária</span>
+                                    <span class="trait">🦁 Determinada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personagem-carousel-item">
+                        <div class="personagem-card" onclick="abrirModalPersonagem('zack')">
+                            <div class="personagem-img-container">
+                                <img src="assets/personagem-zack.jpg" alt="Zack Levine" class="personagem-img" onerror="this.src='https://placehold.co/400x500/2a2a2a/FFD700?text=5º+Personagem'">
+                                <div class="personagem-img-overlay">
+                                    <i class="bi bi-arrows-fullscreen"></i>
+                                </div>
+                            </div>
+                            <div class="personagem-info">
+                                <h3 class="personagem-nome">ZACK LEVINE</h3>
+                                <div class="personagem-familia">🏛️ Família Levine</div>
+                                <div class="personagem-detalhes">
+                                    <span><i class="bi bi-calendar"></i> 28 Anos</span>
+                                    <span><i class="bi bi-star"></i> Libra</span>
+                                </div>
+                                <p class="personagem-desc">Disiplinado, ele não vacila em nenhum momento em seu papel de proteger a herdeira dos Wright, mesmo ela não facilitando.</p>
+                                <div class="personagem-traits">
+                                    <span class="trait">⚡ Leal</span>
+                                    <span class="trait">🦁 Protetor</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fanarts" class="section galeria-section">
+        <div class="container">
+            <h2 class="section-title">Galeria de Fãs</h2>
+            <p class="text-center mb-4" style="color: rgba(255,255,255,0.7);">
+                <i class="bi bi-heart-fill" style="color: #FFD700;"></i> 
+                Ilustrações incríveis criadas pelos leitores de Império de Cinzas
+                <i class="bi bi-heart-fill" style="color: #FFD700;"></i>
+            </p>
+            <div class="galeria-grid" id="galeriaGrid"></div>
+            <div class="text-center mt-4">
+                <a href="#" class="social-link" style="display: inline-flex;">
+                    <i class="bi bi-upload"></i> Compartilhe sua arte
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia" class="section experiencia-section">
+        <div class="container">
+            <h2 class="section-title">Experiência Imersiva</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="experiencia-card text-center h-100">
+                        <div class="experiencia-icon">
+                            <i class="bi bi-music-note-beamed"></i>
+                        </div>
+                        <h3>Trilha Sonora Oficial</h3>
+                        <p>Mergulhe no universo de Império de Cinzas com esta playlist especialmente selecionada pela autora para acompanhar a leitura.</p>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/46YFSCnx9Z5Q6QaONn7ySY?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        <a href="https://open.spotify.com/playlist/46YFSCnx9Z5Q6QaONn7ySY?si=gWTe5D7hQOyEmZsU2fFR1w&pi=gdWpCxJHRUCju&nd=1&dlsi=7276c7aab3f64df1" 
+                           target="_blank" 
+                           class="playlist-btn mt-3">
+                            <i class="bi bi-spotify"></i> Abrir no Spotify
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="experiencia-card h-100">
+                        <div class="experiencia-icon">
+                            <i class="bi bi-palette"></i>
+                        </div>
+                        <h3>Atmosfera da Obra</h3>
+                        <p>Inspirado em paisagens distópicas, incêndios infinitos e a arquitetura de Prometheus, a playlist combina:</p>
+                        <ul style="color: rgba(255,255,255,0.8); list-style: none; padding-left: 0;">
+                            <li><i class="bi bi-check-circle-fill" style="color: #FFD700; font-size: 0.8rem;"></i> Músicas épicas e orquestrais</li>
+                            <li><i class="bi bi-check-circle-fill" style="color: #FFD700; font-size: 0.8rem;"></i> Trilhas sonoras de filmes distópicos</li>
+                            <li><i class="bi bi-check-circle-fill" style="color: #FFD700; font-size: 0.8rem;"></i> Playlists de fantasia sombria</li>
+                            <li><i class="bi bi-check-circle-fill" style="color: #FFD700; font-size: 0.8rem;"></i> Sons ambientes de cinzas e fogo</li>
+                        </ul>
+                        <p class="mt-3" style="color: rgba(255,255,255,0.6); font-size: 0.85rem;">
+                            <i class="bi bi-headphones"></i> Recomendado para leitura com fones de ouvido
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="autora" class="section autora-section">
+        <div class="container">
+            <h2 class="section-title">A Autora</h2>
+            
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-4 text-center">
+                    <img src="assets/camilla-sales.jpeg" alt="Camilla Sales" class="autora-foto" onerror="this.src='https://placehold.co/300x300/2a2a2a/FFD700?text=Camilla+Sales'">
+                </div>
+                <div class="col-lg-8">
+                    <div class="autora-card">
+                        <h3 class="autora-nome">Camilla Sales</h3>
+                        <div class="autora-bio">
+                            <p>É a mais nova escritora nacional e sergipana de ficção e fantasia. Sua primeira grande conquista é este livro, <strong>Império de Cinzas</strong>, que está sendo entregue para o mundo carregando o peso de seus sonhos, esperando que eles ajudem a abrir portas para os sonhos de seus leitores.</p>
+                            <p>Camilla é uma entusiasta de fantasia com um apetite insaciável por histórias de amor, que espera poder compartilhar com os leitores. Atualmente trabalha em <strong>Cidadela de Vidro</strong>, o grande final desta história.</p>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/millaescriva?igsh=b254bW55N2FvYzds" target="_blank" class="social-link"><i class="bi bi-instagram"></i> Instagram</a>
+                            <a href="https://www.tiktok.com/@millaescriva?_r=1&_t=ZS-94pSmdydGHF" target="_blank" class="social-link"><i class="bi bi-tiktok"></i> TikTok</a>
+                            <a href="#" class="social-link"><i class="bi bi-envelope"></i> Contato</a>
+                            <a href="https://open.spotify.com/playlist/46YFSCnx9Z5Q6QaONn7ySY?si=gWTe5D7hQOyEmZsU2fFR1w&pi=gdWpCxJHRUCju&nd=1&dlsi=7276c7aab3f64df1" target="_blank" class="social-link"><i class="bi bi-spotify"></i> Playlist Oficial</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="avaliacoes" class="section avaliacoes-section">
+        <div class="container">
+            <h2 class="section-title">O que os leitores estão dizendo</h2>
+            <p class="text-center mb-4" style="color: rgba(255,255,255,0.7);">
+                <i class="bi bi-star-fill" style="color: #FFD700;"></i> 
+                Avaliações de leitores no Amazon.com.br
+                <i class="bi bi-star-fill" style="color: #FFD700;"></i>
+            </p>
+            <div class="avaliacoes-grid" id="avaliacoesGrid"></div>
+            <div class="text-center mt-4">
+                <a href="https://www.amazon.com.br/dp/SEU_ASIN" target="_blank" class="amazon-badge">
+                    <i class="bi bi-amazon"></i> Ver todas as avaliações na Amazon
+                </a>
+                <div class="mt-3">
+                    <a href="#" class="ver-todas-btn" id="verMaisAvaliacoes">
+                        <i class="bi bi-plus-circle"></i> Carregar mais avaliações
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox" onclick="fecharLightbox()">
+        <span class="lightbox-close" onclick="fecharLightbox()">&times;</span>
+        <img id="lightboxImg" class="lightbox-img" src="" alt="">
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Império de Cinzas - Camilla Sales. Todos os direitos reservados.</p>
+            <p class="mt-2">
+                <small>Uma jornada através das cinzas, em busca da verdade.</small>
+            </p>
+        </div>
+    </footer>
     <script src="script.js"></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
